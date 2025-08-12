@@ -192,7 +192,7 @@ def main():
     metrics_statistical = {}
     metrics_raw = {}
 
-    data_statistical = create_statistical_features(master_file, window_size=50, step_size=1)
+    data_statistical = create_statistical_features(master_file, window_size=10, step_size=1)
     if not data_statistical.empty:
         data_statistical['kondisi'] = data_statistical['label'].map(target_names_map)
         
